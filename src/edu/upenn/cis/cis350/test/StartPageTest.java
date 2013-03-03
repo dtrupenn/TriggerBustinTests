@@ -18,6 +18,21 @@ public class StartPageTest extends ActivityInstrumentationTestCase2<StartPage>{
 		setActivityInitialTouchMode(false);
 		
 		sActivity = getActivity();
+		
+		
+		
+		
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter1);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter2);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter3);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter4);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter5);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter6);
+		sActivity.findViewById(edu.upenn.cis.cis350.R.id.counter7);
+		
 	}
+	
+	
 	
 }
