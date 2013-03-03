@@ -29,13 +29,10 @@ public class ScoreShowTest extends ActivityInstrumentationTestCase2<ScoreShow> {
 	    setActivityInitialTouchMode(false);
 	    
 	    gActivity = getActivity();
-	    
-	    //prefs = gActivity.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
-	  } // end of setUp() method definition
+	} // end of setUp() method definition
 	
 	
 	public void testScoreBoardPreConditions() {
-		//gActivity.getApplicationContext();
 		SharedPreferences prefs = gActivity.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
 		
 		TextView view = (TextView) gActivity.findViewById(edu.upenn.cis.cis350.R.id.counter);
@@ -71,5 +68,15 @@ public class ScoreShowTest extends ActivityInstrumentationTestCase2<ScoreShow> {
 		//Add score of 10
 		gActivity.updateScore(10, prefs);
 		assertTrue(10 == prefs.getInt("key0", 0));
+		//Add score of 12
+		gActivity.updateScore(12, prefs);
+		assertTrue(12 == prefs.getInt("key0", 0));
+		assertTrue(10 == prefs.getInt("key1", 0));
+		//Add score of 8
+		gActivity.updateScore(8, prefs);
+		assertTrue(12 == prefs.getInt("key0", 0));
+		assertTrue(10 == prefs.getInt("key1", 0));
+		assertTrue(8 == prefs.getInt("key2", 0));
+		
 	}
 }
